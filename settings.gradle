@@ -1,0 +1,3 @@
+rootProject.name = "JsonAssets"
+include ':json-assets'
+include ':sample'
