@@ -24,16 +24,6 @@ class JsonAssetsParser(private val json: Json) {
         return Json.decodeFromString(deserializationStrategy, data)
     }
 
-    fun <T> parse(
-        assetsFilePath: String,
-        deserializationStrategy: DeserializationStrategy<T>,
-        ignoreUnknownKeys: Boolean = false
-    ): T {
-        val data = context.assets.open(assetsFilePath).stringify()
-
-        return json.decodeFromString(deserializationStrategy, data)
-    }
-
     private fun InputStream.stringify(): String {
         return try {
             val bytes = ByteArray(available())
