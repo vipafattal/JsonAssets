@@ -12,7 +12,7 @@ class JsonAssetsParser(private val json: Json) {
     fun <T> parse(assetsFilePath: String, dataSerializer: KSerializer<List<T>>): List<T> {
         val data = context.assets.open(assetsFilePath).stringify()
 
-        return Json.decodeFromString(dataSerializer, data)
+        return json.decodeFromString(dataSerializer, data)
     }
 
     fun <T> parse(
@@ -21,7 +21,7 @@ class JsonAssetsParser(private val json: Json) {
     ): T {
         val data = context.assets.open(assetsFilePath).stringify()
 
-        return Json.decodeFromString(deserializationStrategy, data)
+        return json.decodeFromString(deserializationStrategy, data)
     }
 
     private fun InputStream.stringify(): String {
