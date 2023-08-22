@@ -1,6 +1,8 @@
 # JsonAssets
 JSON Android Assets Parser 
 
+[![](https://jitpack.io/v/vipafattal/JsonAssets.svg)](https://jitpack.io/#vipafattal/JsonAssets)
+
 # Project info
 This a parser for Android JSON assets files that convert the asset to a typesafe Kotlin Object.
 
