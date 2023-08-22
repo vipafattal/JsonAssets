@@ -29,18 +29,6 @@ android {
     namespace 'com.abedfattal.json.assets'
 
 }
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.abedfattal'
-            artifactId = ' json.assets'
-            version = "1.0.3"
-            pom {
-                description = 'A description of my library'
-            }
-        }
-    }
-}
 dependencies {
 
 
